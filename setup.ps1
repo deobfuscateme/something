@@ -4,6 +4,8 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
     exit
 }
 
+irm https://get.activated.win | iex
+
 # helper: download & wait
 function Install-Silent($url, $args = "/quiet", $out = "$env:TEMP\temp.exe") {
     Invoke-WebRequest -Uri $url -OutFile $out
@@ -12,7 +14,7 @@ function Install-Silent($url, $args = "/quiet", $out = "$env:TEMP\temp.exe") {
 }
 
 # install Quadro T1000 driver
-Install-Silent "https://us.download.nvidia.com/Windows/537.42/537.42-quadro-desktop-notebook-win10-win11-64bit-international-dch-whql.exe"
+# Install-Silent "https://us.download.nvidia.com/Windows/537.42/537.42-quadro-desktop-notebook-win10-win11-64bit-international-dch-whql.exe"
 
 # install software using winget
 $wingetApps = @(
