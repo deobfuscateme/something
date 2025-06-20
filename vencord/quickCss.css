@@ -1,0 +1,11 @@
+div[class^="footer_"] {
+    display: none;
+}
+
+[data-list-item-id="guildsnav___home"] {
+  content:url("https://files.catbox.moe/grpdn8.png");
+}
+
+[class*=channelAppLauncher_] {
+  display: none;
+}
